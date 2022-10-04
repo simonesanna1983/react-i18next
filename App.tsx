@@ -18,16 +18,24 @@ export default function App() {
 
   return (
     <div>
-      <p>{language}</p>
-      <h1>{t('Hello')}</h1>
+      <header style={{ paddingBottom: '30px' }}>
+        <select
+          style={{ float: 'right' }}
+          value={language}
+          onChange={handleChange}
+        >
+          <option value="en">English</option>
+          <option value="es">Spanish</option>
+          <option value="it">Italian</option>
+          <option value="ja">Japanese</option>
+          <option value="el">greek</option>
+        </select>
+      </header>
 
-      <select value={language} onChange={handleChange}>
-        <option value="en">English</option>
-        <option value="es">Spanish</option>
-        <option value="it">Italian</option>
-        <option value="ja">Japanese</option>
-        <option value="el">greek</option>
-      </select>
+      <section>
+        {/* <p>{language}</p> */}
+        <h1>{t('Hello')}</h1>
+      </section>
     </div>
   );
 }
