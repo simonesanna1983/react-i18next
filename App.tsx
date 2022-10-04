@@ -10,9 +10,6 @@ export default function App() {
   const [language, setLanguage] = useState('en');
   const { t } = useTranslation();
 
-  // const baseUrl =
-  //   'https://stackblitz.com/files/react-ts-w3d2sq/github/simonesanna1983/react-i18next/main';
-
   function handleChange(event) {
     const lang = event.target.value;
     setLanguage(lang);
@@ -23,7 +20,7 @@ export default function App() {
   return (
     <div>
       <header style={{ paddingBottom: '30px' }}>
-        <img src={`${imageBaseUrl}/${language}.png`} width="50" height="60" />
+        <img src={`${imageBaseUrl}/${language}.png`} width="40" height="40" />
 
         <select
           style={{ float: 'right' }}
@@ -41,6 +38,9 @@ export default function App() {
       <section>
         <h1>{t('Hello')}</h1>
       </section>
+      <footer>
+        <p>{t('this is the footer')}</p>
+      </footer>
     </div>
   );
 }
