@@ -5,6 +5,8 @@ import i18n from './i18n';
 
 import './style.css';
 
+
+
 export default function App() {
   const [language, setLanguage] = useState('en');
   const { t } = useTranslation();
