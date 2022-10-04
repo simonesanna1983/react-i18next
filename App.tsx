@@ -1,22 +1,22 @@
 import * as React from 'react';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import i18n from './i18n';
 
 import './style.css';
 
 export default function App() {
   const [language, setLanguage] = useState('en');
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   function handleChange(event) {
     setLanguage(event.target.value);
 
-    i18n.changeLanguage('it');
+    i18n.changeLanguage(event.target.value);
   }
 
   return (
     <div>
-      <h1>Hello</h1>
       <p>{language}</p>
       <h1>{t('Hello')}</h1>
 
