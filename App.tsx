@@ -5,12 +5,14 @@ import i18n from './i18n';
 
 import './style.css';
 
-
+//https://stackblitz.com/files/react-ts-w3d2sq/github/simonesanna1983/react-i18next/main/el.png
 
 export default function App() {
   const [language, setLanguage] = useState('en');
   const { t } = useTranslation();
 
+  const baseUrl =
+    'https://stackblitz.com/files/react-ts-w3d2sq/github/simonesanna1983/react-i18next/main';
   function handleChange(event) {
     const lang = event.target.value;
     setLanguage(lang);
@@ -37,9 +39,9 @@ export default function App() {
       <section>
         {/* <p>{language}</p> */}
         <h1>{t('Hello')}</h1>
-        {/* <img src={`assets/icons/flags/${language}.png`} /> */}
+        <img src={`${baseUrl}/${language}.png`} />
         {/* <img src={require('./assets/icons/flags/en.png')} /> */}
-        <img src={require('./assets/icons/flags/en.png')}  />
+        {/* <img src={require('./assets/icons/flags/en.png')}  /> */}
       </section>
     </div>
   );
