@@ -35,6 +35,8 @@ export default function App() {
       <section>
         {/* <p>{language}</p> */}
         <h1>{t('Hello')}</h1>
+        <img src={`assets/icons/flags/${language}.png`} />
+        <img src={require('./logo.jpeg')} />
       </section>
     </div>
   );
