@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { imageBaseUrl } from './const';
 import i18n from './i18n';
@@ -18,7 +18,7 @@ export default function App() {
   }
 
   return (
-    <div>
+    <Fragment>
       <header style={{ paddingBottom: '30px' }}>
         <img src={`${imageBaseUrl}/${language}.png`} width="40" height="40" />
 
@@ -41,6 +41,6 @@ export default function App() {
       <footer>
         <p>{t('this is the footer')}</p>
       </footer>
-    </div>
+    </Fragment>
   );
 }
