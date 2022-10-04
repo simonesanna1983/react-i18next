@@ -10,9 +10,10 @@ export default function App() {
   const { t } = useTranslation();
 
   function handleChange(event) {
-    setLanguage(event.target.value);
+    const lang = event.target.value;
+    setLanguage(lang);
 
-    i18n.changeLanguage(event.target.value);
+    i18n.changeLanguage(lang);
   }
 
   return (
